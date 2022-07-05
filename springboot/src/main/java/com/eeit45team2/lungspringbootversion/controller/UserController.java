@@ -22,9 +22,9 @@ public class UserController {
     public Result<?> login(@RequestBody User user){
         User res = userMapper.selectOne(Wrappers.<User>lambdaQuery().eq(User::getUsername, user.getUsername()).eq(User::getPassword, user.getPassword()));
         if(res == null){
-            return Result.error("-1","帳號或密碼錯誤");
+            return Result.error("-1", "帳號或密碼錯誤");
         }
-        return Result.success();
+        return Result.success(res);
     }
 
     @PostMapping("/register")

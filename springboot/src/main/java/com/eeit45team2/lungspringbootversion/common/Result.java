@@ -1,6 +1,9 @@
 package com.eeit45team2.lungspringbootversion.common;
 
 public class Result<T> {
+    /**
+     * 設置Result訊息
+     */
     private String code;
     private String msg;
     private T data;

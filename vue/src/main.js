@@ -7,6 +7,7 @@ import 'element-plus/dist/index.css';
 import * as ElIconModules  from '@element-plus/icons-vue'
 import zhCn from 'element-plus/es/locale/lang/zh-tw'
 
+
 import '@/assets/css/global.css'
 
 createApp(App).use(store).use(router).use(ElementPlus,{locale: zhCn,size: 'big'}).mount('#app')

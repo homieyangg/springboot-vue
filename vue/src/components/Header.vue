@@ -5,14 +5,14 @@
     <div style="width: 100px">
       <el-dropdown style="line-height: 50px">
         <span class="el-dropdown-link">
-         {{  user?.nickName }}
+         {{  user.nickName }}
           <el-icon class="el-icon--right">
             <ArrowDown/>
           </el-icon>
         </span>
         <template #dropdown>
           <el-dropdown-menu>
-            <el-dropdown-item>個人資訊</el-dropdown-item>
+            <el-dropdown-item @click="$router.push('/person')">個人資訊</el-dropdown-item>
             <el-dropdown-item @click="$router.push('/login')">退出系統</el-dropdown-item>
             </el-dropdown-menu>
         </template>

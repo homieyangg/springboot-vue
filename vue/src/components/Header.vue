@@ -5,7 +5,7 @@
     <div style="width: 100px">
       <el-dropdown style="line-height: 50px">
         <span class="el-dropdown-link">
-          管理員
+         {{  user?.nickName }}
           <el-icon class="el-icon--right">
             <ArrowDown/>
           </el-icon>
@@ -25,7 +25,17 @@
 import {ArrowDown} from "@element-plus/icons";
 export default {
   name: "Header",
-  components: {ArrowDown}
+  components: {ArrowDown},
+  props:['user'],
+  data(){
+    return{
+      user:{}
+    }
+  },
+  created() {
+    let userStr = sessionStorage.getItem("user") || "{}"
+    this.user = JSON.parse(userStr)
+  }
 }
 </script>
 

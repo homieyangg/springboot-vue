@@ -51,6 +51,7 @@ export default {
                 type: "success",
                 message: "登入成功"
               })
+              sessionStorage.setItem("user",JSON.stringify(res.data))
               this.$router.push("/") //登入成功後進行頁面跳轉,跳轉到後台主頁
             } else {
               this.$message({
